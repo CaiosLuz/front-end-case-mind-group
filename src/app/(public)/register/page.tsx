@@ -1,0 +1,29 @@
+import styles from './Register.module.css';
+
+import Link from "next/link";
+
+export default function RegisterPage() {
+  return (
+    <div>
+      <main className={styles.main}>
+        <div className={styles.logo}>
+          M.
+          <p>Inovação ao Seu Alcance.</p>
+        </div>
+        <div className={styles.conteudo}>
+          <h2>Registrar</h2>
+          <form action="" className={styles.formulario}>
+            <label htmlFor="email">Email</label>
+            <input type="text" placeholder="email@email.com"/>
+            <label htmlFor="senha">Senha</label>
+            <input type="password" placeholder="∗∗∗∗"/>
+            <label htmlFor="senha">Confirme senha</label>
+            <input type="password" placeholder="∗∗∗∗"/>
+            <button type="submit">Criar conta</button>
+            <p className={styles.novoUsuario}>Novo usuário?<Link href="../register">   Clique aqui</Link></p>
+          </form>
+        </div>
+      </main>
+    </div>
+  );
+}
