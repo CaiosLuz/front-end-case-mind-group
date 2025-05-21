@@ -58,9 +58,9 @@ export default function NewArEditUserticle() {
               <label htmlFor="imagemUpload" className={styles.selecionarImagem}>SELECIONAR</label>
               <div className={styles.grupoForm}>
               <label htmlFor="" className={styles.label}>Nome</label>
-              <input type="text" placeholder="Adicione um título" className={styles.input}/>
+              <input type="text" placeholder="Nome" className={styles.input}/>
               <label htmlFor="" className={styles.label}>Sobrenome</label>
-              <input type="text" placeholder="Adicione um título" className={styles.input}/>
+              <input type="text" placeholder="Sobrenome" className={styles.input}/>
             </div>
             </div>
 

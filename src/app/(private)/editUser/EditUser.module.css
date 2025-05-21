@@ -73,15 +73,18 @@
     justify-content: space-between;
 }
 
-.selecionarImagem {
+.inserirImagem {
+    width: 40%;
+}
+
+.inserirImagem .selecionarImagem {
+    width:20%;
+    padding: 1em 0.5em;
     background-color: #007BFF;
     color: #FFFFFF;
-    padding: 0.7em 1.5em;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     text-align: center;
-    display: inline-block;
-    width: fit-content;
 }
 
 .previewmagem {
