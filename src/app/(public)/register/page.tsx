@@ -17,7 +17,7 @@ export default function RegisterPage() {
             <input type="text" placeholder="email@email.com"/>
             <label htmlFor="senha">Senha</label>
             <input type="password" placeholder="∗∗∗∗"/>
-            <label htmlFor="senha">Confirme senha</label>
+            <label htmlFor="senha">Confirmar senha</label>
             <input type="password" placeholder="∗∗∗∗"/>
             <button type="submit">Criar conta</button>
             <p className={styles.novoUsuario}>Já tem cadastro?<Link href="../login">   Clique aqui</Link></p>

@@ -1,8 +1,8 @@
-import styles from './Login.module.css';
+import styles from './EsqueciSenha.module.css';
 
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <div>
       <main className={styles.main}>
@@ -11,15 +11,16 @@ export default function LoginPage() {
           <p>Inovação ao Seu Alcance.</p>
         </div>
         <div className={styles.conteudo}>
-          <h2>Conectar</h2>
+          <h2>Esqueci a senha</h2>
           <form action="" className={styles.formulario}>
             <label htmlFor="email">Email</label>
             <input type="text" placeholder="email@email.com"/>
             <label htmlFor="senha">Senha</label>
             <input type="password" placeholder="∗∗∗∗"/>
-            <Link href="../esqueciSenha" className={styles.esqueceuSenha}>Esqueceu a senha?</Link>
-            <button type="submit">Entrar</button>
-            <p className={styles.novoUsuario}>Novo usuário?<Link href="../register">   Clique aqui</Link></p>
+            <label htmlFor="senha">Confirmar senha</label>
+            <input type="password" placeholder="∗∗∗∗"/>
+            <button type="submit">Alterar</button>
+            <p className={styles.novoUsuario}>Já tem cadastro?<Link href="../login">   Clique aqui</Link></p>
           </form>
         </div>
       </main>
