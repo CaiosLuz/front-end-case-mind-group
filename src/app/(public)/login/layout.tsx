@@ -1,4 +1,6 @@
-export default function RootLayout({
+import '../../globals.css';
+
+export default function PublicLayout({
   children,
 }: {
   children: React.ReactNode
