@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.h1 {
+    font-family: 'Montserrat';
+    font-size: 2em;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupoDireita {
+    display: flex;
+    gap: 10px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulario label {
+    font-family: 'Montserrat';
+    display: block;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.formulario input {
+    width: 100%;
+    height: 3em;
+    border: 1px solid #969696;
+    border-radius: 5px;
+}
+
+.formulario textarea {
+    width: 100%;
+    height: 16em;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    vertical-align: top;
+    padding: 0.5em 0.5em;
+}
+
+.cancelarBotao {
+    font-family: 'Inter/Inter Medium/sm';
+    background-color: #FF3B30;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 1em 1.5em;
+}
+
+.salvarBotao {
+    background-color: #18181B;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 1em 2em;
+}
+
+.grupoImagem {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.selecionarImagem {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+}
+
+.previewmagem {
+    width: 230px;
+    height: 120px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+
+.imagemPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.previewImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

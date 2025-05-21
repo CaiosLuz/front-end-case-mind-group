@@ -1,9 +1,9 @@
 'use client';
-import styles from './NewArticle.module.css';
+import styles from './EditArticle.module.css';
 import { ChangeEvent, useRef } from 'react';
 import { useState } from 'react';
 
-export default function NewArticle() {
+export default function EditArticle() {
   
   const [preImagem, setImagemPre] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -25,7 +25,7 @@ export default function NewArticle() {
       <main className={styles.main}>
         <form action="" className={styles.formulario}>
           <div className={styles.header}>
-            <h1 className={styles.h1}>Novo Artigo</h1>
+            <h1 className={styles.h1}>Editar artigo</h1>
             <div className={styles.grupoDireita}>
               <button className={styles.cancelarBotao}>Cancelar</button>
               <button className={styles.salvarBotao}>Salvar</button>

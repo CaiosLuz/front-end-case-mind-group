@@ -1,9 +1,9 @@
 'use client';
-import styles from './NewArticle.module.css';
+import styles from './EditUser.module.css';
 import { ChangeEvent, useRef } from 'react';
 import { useState } from 'react';
 
-export default function NewArticle() {
+export default function NewArEditUserticle() {
   
   const [preImagem, setImagemPre] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -25,23 +25,19 @@ export default function NewArticle() {
       <main className={styles.main}>
         <form action="" className={styles.formulario}>
           <div className={styles.header}>
-            <h1 className={styles.h1}>Novo Artigo</h1>
+            <h1 className={styles.h1}>Editar Perfil</h1>
             <div className={styles.grupoDireita}>
               <button className={styles.cancelarBotao}>Cancelar</button>
               <button className={styles.salvarBotao}>Salvar</button>
             </div>
           </div>
-          <div className={styles.grupoForm}>
-            <label htmlFor="" className={styles.label}>Título</label>
-            <input type="text" placeholder="Adicione um título" className={styles.input}/>
-          </div>
-
+        
           {/* IMAGEM */}
 
           <div className={styles.grupoImagem}>
 
             <div className={styles.inserirImagem}>
-              <label htmlFor="" className={styles.label}>Inserir imagem</label>
+              <label htmlFor="" className={styles.label}>Inserir avatar</label>
               <input
                 type="file"
                 name="imageUpload"
@@ -60,6 +56,12 @@ export default function NewArticle() {
                 onClick={handleTextInputClick}
               />
               <label htmlFor="imagemUpload" className={styles.selecionarImagem}>SELECIONAR</label>
+              <div className={styles.grupoForm}>
+              <label htmlFor="" className={styles.label}>Nome</label>
+              <input type="text" placeholder="Adicione um título" className={styles.input}/>
+              <label htmlFor="" className={styles.label}>Sobrenome</label>
+              <input type="text" placeholder="Adicione um título" className={styles.input}/>
+            </div>
             </div>
 
             <div className={styles.previewImagem}>
@@ -69,13 +71,6 @@ export default function NewArticle() {
                 <img src="/images/imagemnull.png" alt="Imagem" className={styles.placeholderImagem}/>
               )}
             </div>
-          </div>
-
-          {/* INPUT TEXTO DO ARTIGO */}
-
-          <div className={styles.grupoForm}>
-            <label htmlFor="" className={styles.label}>Texto</label>
-            <textarea name="" id="" placeholder="Escreva seu artigo" className={styles.textarea}></textarea>
           </div>
         </form>
       </main>

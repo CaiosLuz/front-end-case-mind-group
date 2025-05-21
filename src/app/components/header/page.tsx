@@ -17,7 +17,7 @@ export default function Header() {
                     <Link href="./artigo" className={styles.navLink}>Artigos</Link>
                 </li>
                 <li>
-                    <Link href="./artigo/new" className={styles.navLink}>Publicar</Link>
+                    <Link href="../article/new" className={styles.navLink}>Publicar</Link>
                 </li>
                 <li>
                     <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
