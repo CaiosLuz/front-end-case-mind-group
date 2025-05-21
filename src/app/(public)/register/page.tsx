@@ -20,7 +20,7 @@ export default function RegisterPage() {
             <label htmlFor="senha">Confirme senha</label>
             <input type="password" placeholder="∗∗∗∗"/>
             <button type="submit">Criar conta</button>
-            <p className={styles.novoUsuario}>Novo usuário?<Link href="../register">   Clique aqui</Link></p>
+            <p className={styles.novoUsuario}>Já tem cadastro?<Link href="../login">   Clique aqui</Link></p>
           </form>
         </div>
       </main>
