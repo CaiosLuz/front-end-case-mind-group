@@ -13,6 +13,8 @@ export default function RegisterPage() {
         <div className={styles.conteudo}>
           <h2>Registrar</h2>
           <form action="" className={styles.formulario}>
+            <label htmlFor="nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome"/>
             <label htmlFor="email">Email</label>
             <input type="text" placeholder="email@email.com"/>
             <label htmlFor="senha">Senha</label>
