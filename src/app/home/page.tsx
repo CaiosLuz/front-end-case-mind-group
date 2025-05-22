@@ -29,7 +29,7 @@ export default function Home() {
             <div className={styles.blocoInfoPrincipal}>
               <div className={styles.infoDestaque}>
                 <p>Por {article.author} - {article.date}</p>
-                <Link href="" className={styles.lerMais}>LER MAIS</Link>
+                <Link href="/article" className={styles.lerMais}>LER MAIS</Link>
               </div>
             </div>
           </div>
