@@ -10,7 +10,6 @@ export default function Home() {
         {/* BLOCO DE DESTAQUE COM DUAS COLUNAS */}
         <div className={styles.destaquesPrincipais}>
           <div className={styles.coluna1}>
-
           </div>
           <div className={styles.coluna2}>
 
