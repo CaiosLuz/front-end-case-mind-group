@@ -27,6 +27,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>
@@ -44,6 +45,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>
@@ -61,6 +63,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>
@@ -78,6 +81,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>
@@ -95,6 +99,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>
@@ -112,6 +117,7 @@ export default function Articles() {
         </div>
         <div className={styles.blocoInfoPrincipal}>
           <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
             <p>Por {article.author} - {article.date}</p>
           </div>
         </div>

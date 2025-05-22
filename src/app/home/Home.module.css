@@ -25,6 +25,20 @@
     margin: 1.5em ;
 }
 
+.avatar {
+    width: 100%;
+    max-width: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    object-fit: cover;
+}
+
+.autorDestaque {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
 .infoDestaque {
     display: flex;
     justify-content: space-between;

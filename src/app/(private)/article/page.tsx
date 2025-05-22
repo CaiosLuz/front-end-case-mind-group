@@ -17,7 +17,10 @@ export default function Article() {
 
         <div className={styles.header}>
           <h1 className={styles.title}>{article.title}</h1>
-          <p className={styles.author}>Por {article.author} - {article.date}</p>
+          <div className={styles.infoDestaque}>
+            <img src="/images/icon-avatar.png" alt="" className={styles.avatar}/>
+            <p>Por {article.author} - {article.date}</p>
+          </div>
           <div className={styles.linha}></div>
           <div className={styles.imagemArtigo}>
             <img src={article.image} alt="Imagem do artigo" className={styles.imagem} />
