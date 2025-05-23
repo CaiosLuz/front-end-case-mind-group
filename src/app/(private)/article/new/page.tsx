@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 export default function NewArticle() {
   
+  // Pré visualização da imagem
   const [preImagem, setImagemPre] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -13,27 +14,67 @@ export default function NewArticle() {
     if (file) {
       const preUrl = URL.createObjectURL(file);
       setImagemPre(preUrl);
+      setImagemSelecionada(file);
     }
   }
-
+  
   const handleTextInputClick = () => {
-    fileInputRef.current?.click(); // Trigger click on the hidden file input
+    fileInputRef.current?.click();
   };
+
+  const [titulo, setTitulo] = useState("");
+  const [conteudo, setConteudo] = useState("");
+  const [imagemSelecionada, setImagemSelecionada] = useState<File | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    if (!titulo || !conteudo || !imagemSelecionada) {
+      alert("Preencha o campo título e conteúdo!");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("titulo", titulo);
+    formData.append("conteudo", conteudo);
+    formData.append("imagem", imagemSelecionada);
+
+    try {
+      const response = await fetch("http://localhost:3001/api/artigos", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Artigo criado!");
+        setTitulo("");
+        setConteudo("");
+        setImagemPre(null);
+        setImagemSelecionada(null);
+      } else {
+        alert("Erro ao criar artigo");
+      }
+    } catch (error) {
+      console.error("Erro:", error);
+      alert("Erro na requisição");
+    }
+
+  }
 
   return (
     <div>
       <main className={styles.main}>
-        <form action="" className={styles.formulario}>
+        <form onSubmit={handleSubmit} className={styles.formulario}>
           <div className={styles.header}>
             <h1 className={styles.h1}>Novo Artigo</h1>
             <div className={styles.grupoDireita}>
               <button className={styles.cancelarBotao}>Cancelar</button>
-              <button className={styles.salvarBotao}>Salvar</button>
+              <button className={styles.salvarBotao} type='submit'>Salvar</button>
             </div>
           </div>
           <div className={styles.grupoForm}>
             <label htmlFor="" className={styles.label}>Título</label>
-            <input type="text" placeholder="Adicione um título" className={styles.input}/>
+            <input type="text" value={titulo} placeholder="Adicione um título" onChange={(e) => setTitulo(e.target.value)} className={styles.input}/>
           </div>
 
           {/* IMAGEM */}
@@ -75,7 +116,7 @@ export default function NewArticle() {
 
           <div className={styles.grupoForm}>
             <label htmlFor="" className={styles.label}>Texto</label>
-            <textarea name="" id="" placeholder="Escreva seu artigo" className={styles.textarea}></textarea>
+            <textarea value={conteudo} placeholder="Escreva seu artigo" onChange={(e) => setConteudo(e.target.value)} className={styles.textarea}></textarea>
           </div>
         </form>
       </main>
